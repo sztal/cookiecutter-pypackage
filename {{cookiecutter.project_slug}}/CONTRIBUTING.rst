@@ -3,7 +3,7 @@ Contributing
 ============
 
 Contributions are welcome, and they are greatly appreciated! Every
-little bit helps, and credit will always be given. 
+little bit helps, and credit will always be given.
 
 You can contribute in many ways:
 
@@ -36,7 +36,7 @@ is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-{{ cookiecutter.project_name }} could always use more documentation, whether as part of the 
+{{ cookiecutter.project_name }} could always use more documentation, whether as part of the
 official {{ cookiecutter.project_name }} docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
@@ -55,7 +55,7 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `{{ cookiecutter.repo_name }}` for
+Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for
 local development.
 
 1. Fork_ the `{{ cookiecutter.repo_name }}` repo on GitHub.
@@ -95,8 +95,8 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 2.6, 2.7, and 3.3, and for PyPy.
-   Check https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }} 
+3. The pull request should work for Python 3.5, 3.6 and 3.7 and for PyPy.
+   Check https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}
    under pull requests for active pull requests or run the ``tox`` command and
    make sure that the tests pass for all supported Python versions.
 
@@ -106,4 +106,4 @@ Tips
 
 To run a subset of tests::
 
-	 $ py.test test/test_{{ cookiecutter.repo_name }}.py
+	 $ py.test test/test_{{ cookiecutter.project_slug }}.py

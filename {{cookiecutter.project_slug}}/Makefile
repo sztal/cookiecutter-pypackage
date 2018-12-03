@@ -11,7 +11,7 @@ help:
 	@echo "release - package and upload a release"
 	@echo "sdist - package"
 
-clean: clean-build clean-pyc
+clean: clean-build clean-pyc clean-misc
 
 clean-build:
 	rm -fr build/
@@ -23,8 +23,12 @@ clean-pyc:
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 
+clean-misc:
+    find . -name '.benchmarks' -exec rm -rf {} +
+    find . -name '.pytest-cache' -exec rm -rf {} +
+
 lint:
-	flake8 {{ cookiecutter.repo_name }} test
+	py.test --pylint -m pylint
 
 test:
 	py.test
@@ -33,18 +37,20 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source {{ cookiecutter.repo_name }} setup.py test
+	coverage run --source {{ cookiecutter.project_slug }} setup.py test
 	coverage report -m
 	coverage html
-	open htmlcov/index.html
+	xdg-open htmlcov/index.html
+	# open htmlcov/index.html
 
 docs:
-	rm -f docs/{{ cookiecutter.repo_name }}.rst
+	rm -f docs/{{ cookiecutter.project_slug }}.rst
 	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ {{ cookiecutter.repo_name }}
+	sphinx-apidoc -o docs/ {{ cookiecutter.project_slug }}
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
-	open docs/_build/html/index.html
+	xdg-open docs/_build/html/index.html
+	# open docs/_build/html/index.html
 
 release: clean
 	python setup.py sdist upload

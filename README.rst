@@ -3,11 +3,12 @@ cookiecutter-pypackage
 ======================
 
 Cookiecutter template for a Python package. See https://github.com/audreyr/cookiecutter.
+It was derived directly from https://github.com/Nekroze/cookiecutter-pypackage.
 
-* Free software: BSD license
-* Pytest_ runner: Supports `unittest`, `pytest`, `nose` style tests and more
+* Free software: MIT license
+* Pytest_ runner: Supports `pytest` style tests
 * Travis-CI_: Ready for Travis Continuous integration testing
-* Tox_ testing: Setup to easily test for python 2.6, 2.7, 3.3 and PyPy_
+* Tox_ testing: Setup to easily test for python 3.5, 3.6 and 3.7 and PyPy_
 * Sphinx_ docs: Documentation raedy for generation with, for example, ReadTheDocs_
 * Wheel_ support: Use the newest python package distribution standard from the get go
 
@@ -16,7 +17,7 @@ Usage
 
 Generate a Python package project::
 
-    cookiecutter https://github.com/Nekroze/cookiecutter-pypackage.git
+    cookiecutter https://github.com/sztal/cookiecutter-pypackage.git
 
 Then:
 
@@ -34,7 +35,7 @@ Don't worry, you have options:
 Similar Cookiecutter Templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* `audreyr/cookiecutter-pypackage`_: The original pypackage, uses unittest
+* `github.com/Nekroze/cookiecutter-pypackage`_: The original pypackage, uses unittest
 for testing and other minor changes.
 
 Fork This
@@ -56,7 +57,7 @@ make my own packaging experience better.
 .. _Tox: http://testrun.org/tox/
 .. _Sphinx: http://sphinx-doc.org/
 .. _ReadTheDocs: https://readthedocs.org/
-.. _`audreyr/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter-pypackage
+.. _`github.com/Nekroze/cookiecutter-pypackage`: https://github.com/Nekroze/cookiecutter
 .. _Pytest: http://pytest.org/
 .. _PyPy: http://pypy.org/
 .. _Wheel: http://pythonwheels.com
