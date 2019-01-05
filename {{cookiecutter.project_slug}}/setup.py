@@ -40,6 +40,7 @@ setup(
         'pytest-pylint',
         'pytest-profiling',
         'pytest-benchmark',
+        'pytest-doctestplus',
         'coverage'
     ],
     test_suite='tests',
